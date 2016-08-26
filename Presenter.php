@@ -25,8 +25,10 @@ abstract class Presenter
      */
     public function __get($property)
     {
-        if (method_exists($this, $property)) {
-            return $this->{$property}();
+        $method = camel_case($property);
+
+        if (method_exists($this, $method)) {
+            return $this->{$method}();
         }
 
         return $this->presentable->{$property};
