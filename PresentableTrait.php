@@ -4,7 +4,6 @@ namespace Terranet\Presentable;
 
 trait PresentableTrait
 {
-
     /**
      * View presenter instance
      *
